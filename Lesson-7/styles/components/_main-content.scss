@@ -1,0 +1,184 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 80px;
+    width: 100%;
+    &__head {
+        display: flex;
+        flex-direction: row;
+        padding: 0 30px 20px;
+    }
+    &__title {
+        @include merriw (400, 30px, normal);
+        margin-right: 30px;
+    }
+    &__choice {
+        background-color: white;
+        &-option {
+            @include merriw (400, 30px, normal);
+            color: black;
+        }
+        &-arrow {
+            width: 20px;
+            opacity: 1;
+            height: auto;
+            align-self: center;
+            margin-left: 10px;
+        }
+    }
+    &__helpers {
+        background-color: #f2f4f8;
+        padding: 5px 30px;
+        color: #99a1b3;
+        display: flex;
+        flex-direction: row;
+        height: 55px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-height: 55px;
+        &-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &-button {
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+            margin-right: 80px;
+            @include merriw (400, 12px, normal);
+            color: #99A1B3;
+            cursor: pointer;
+            transition: .25s;
+            &:hover {
+                color: black;
+                transition: .25s;
+            }
+        }
+    }
+    &__settings {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        opacity: .5;
+        cursor: pointer;
+        margin-right: 15px;
+        transition: .25s;
+        &:hover {
+            opacity: .9;
+            transition: .25s;
+        }
+        &-icon {
+            width: 30px;
+        }
+    }
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    width: 280px;
+    height: 100%;
+    border: solid #d6d9e1 1px;
+    background-color: white;
+    border-radius: 5px;
+    &__field {
+        border: 0;
+        width: 100%;
+        height: 100%;
+        transition: .25s;
+        &:focus~.search-form__icon {
+            opacity: .9;
+            transition: .25s;
+        }
+    }
+    &__icon {
+        opacity: .5;
+        height: 28px;
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: solid #99a1b3 1px;
+        border-radius: 4px;
+        padding: 10px 15px;
+        color: black;
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+    &__arrow {
+        height: 10px;
+        align-self: center;
+        &-right {
+            transform: rotate(270deg);
+            margin-left: 12px;
+        }
+        &-left {
+            transform: rotate(90deg);
+            margin-right: 12px;
+        }
+    }
+}
+
+@include media-max (700px) {
+    .main-content {
+        &__settings-icon {
+            width: 40px;
+        }
+        &__head {
+            justify-content: center;
+        }
+        &__helpers-text {
+            display: none;
+        }
+        &__helpers-button {
+            font-size: 45px;
+            font-weight: 700;
+            margin-right: 30px;
+        }
+    }
+    .search-form {
+        border: 0;
+        background-color: transparent;
+        height: 70%;
+        &__field {
+            order: 2;
+            border-radius: 5px;
+            width: 0;
+            border: 0;
+            padding: 0;
+            transition: .3s;
+            &:focus {
+                border: solid #d6d9e1 1px;
+                border-radius: 5px;
+                padding: 0 8px;
+                width: 100%;
+                transition: .3s;
+            }
+        }
+        &__icon {
+            order: 1;
+            margin-right: 5px;
+        }
+        &:hover {
+            .search-form__field {
+                border: solid #d6d9e1 1px;
+                border-radius: 5px;
+                padding: 0 8px;
+                width: 100%;
+                transition: .3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f4f8;
+    &-top {
+        display: flex;
+        height: 40px;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px white solid;
+        justify-content: center;
+        &__menu-link {
+            color: #99A1B3;
+            font-size: 12px;
+        }
+        &__menu-item:hover {
+            border-top: 5px solid transparent;
+        }
+    }
+    &-low {
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        &__logo {
+            height: 13px;
+            margin-right: 10px;
+        }
+        &__description {
+            &-text {
+                color: #99A1B3;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@include media-max (700px) {
+    .footer-top {
+        display: none;
+    }
+}

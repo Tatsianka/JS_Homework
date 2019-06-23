@@ -1,0 +1,123 @@
+.post {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__photo {
+        width: 60px;
+        &-wrapper {
+            margin: 7px 15px 0 0;
+        }
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &__wrapper,
+        &__wrapper-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-holder {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__name {
+            color: #99A1B3;
+            font-size: 12px;
+            margin-right: 25px;
+            transition: .25s;
+            &:hover {
+                color: black;
+                transition: .25s;
+            }
+        }
+        &__level {
+            padding: 5px 15px;
+            background-color: #f2f4f8;
+            border-radius: 5px;
+            color: #99A1B3;
+            font-size: 12px;
+        }
+    }
+    &-comments,
+    &-time {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 15px;
+        transition: .25s;
+        &:hover {
+            .post-comments__icon,
+            .post-time__icon {
+                opacity: .8;
+                transition: .25s;
+            }
+            .post-comments__value,
+            .post-time__value {
+                color: black;
+                transition: .25s;
+            }
+        }
+        &__icon {
+            height: 11px;
+            opacity: .3;
+            margin-right: 5px;
+            align-self: center;
+        }
+        &__value {
+            color: #99A1B3;
+            font-size: 12px;
+        }
+    }
+    &-description {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    &__head {
+        color: #4f9cd4;
+        @include rubik (700, 16px, normal, "Rubik-bold");
+        margin: 5px 0;
+    }
+    &-tags {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #99A1B3;
+        font-size: 12px;
+        &__icon {
+            height: 11px;
+            transform: rotate(90deg);
+            opacity: .3;
+            transition: .25s;
+            &:hover {
+                opacity: .9;
+                transition: .25s;
+            }
+        }
+        &__item {
+            color: #99A1B3;
+            font-size: 12px;
+            margin-left: 5px;
+            transition: .25s;
+            &:hover {
+                color: black;
+                transition: .25s;
+            }
+        }
+    }
+}
+
+@include media-max (970px) {
+    .post-content__wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

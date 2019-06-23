@@ -1,0 +1,89 @@
+// меню моб
+@media (min-width: 699px) {
+    .humburger {
+        display: none;
+    }
+}
+
+@include media-max (700px) {
+    .header-low__wrapper {
+        position: relative;
+        height: 0;
+    }
+    .humburger {
+        width: 23px;
+        height: 20px;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 4%;
+        top: -47px;
+        cursor: pointer;
+        z-index: 1;
+        transition: .2s;
+        &-line {
+            height: 3px;
+            background-color: white;
+            width: 100%;
+        }
+        &.active {
+            border-color: lightgrey;
+            transition: .2s;
+            .humburger-line {
+                background-color: lightgrey;
+                transition: .2s;
+            }
+        }
+        &.active+.header-low {
+            visibility: visible;
+            transition: .3s;
+        }
+    }
+    .header-low {
+        visibility: hidden;
+        position: absolute;
+        overflow: hidden;
+        height: 0;
+        width: 150px;
+        transform: translateY(-10%);
+        z-index: 4;
+        top: -5px;
+        left: 0;
+        transition: .3s;
+        &.active {
+            display: block;
+            transform: none;
+            height: auto;
+            transition: .3s;
+        }
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        height: 100%;
+        padding: 10px;
+        background-color: black;
+        &__item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            transition: .1s;
+            overflow: hidden;
+            &+& {
+                margin-left: 0;
+            }
+            &:hover {
+                background-color: grey;
+                transition: .1s;
+                border-color: grey;
+            }
+        }
+        &__item-link {
+            color: white;
+            font-size: 20px;
+        }
+    }
+}
