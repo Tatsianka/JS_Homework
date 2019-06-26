@@ -22,7 +22,9 @@
             </a>
             <div class="header-top__box">
                 <button class="header-top__choice header-top__choice-delete ">
-                    <div class="header-top__choice-option">New York</div>
+                    <div class="header-top__choice-option">
+                        <span class="header-top__choice-text">New York</span>
+                    </div>
                     <img class="header-top__choice-arrow" src="images/arrow-down.png" alt="">
                 </button>
                 <button class="header-top__notice">
@@ -32,7 +34,7 @@
                     <img class="header-top__notice-icon" src="images/envelope.png" alt="Сообщения">
                 </button>
                 <button class="header-top__user">
-                    <div class="header-top__user-name">User name</div>
+                    <div class="header-top__user-name"><span class="header-top__user-text">User name</span></div>
                     <img class="header-top__user-photo" src="images/userPhoto.jpg" alt="Фото пользователя">
                 </button>
                 <button class="header-top__search">
@@ -148,222 +150,251 @@
         </ul>
     </aside>
 
-    <div class="main-content">
-        <div class="main-content__head">
-            <h1 class="main-content__title">Page title in </h1>
-            <button class="header-top__choice main-content__choice">
-                <div class="header-top__choice-option main-content__choice-option">New York</div>
-                <img class="header-top__choice-arrow main-content__choice-arrow" src="images/arrow-black.png" alt="">
-            </button>
-        </div>
-        <div class="main-content__helpers">
-            <lable class="search-form">
-                <input class="search-form__field" type="search" placeholder="Search...">
-                <img class="search-form__icon" src="images/search-black.png" alt="">
-            </lable>
-            <div class="main-content__helpers-wrapper">
-                <button class="main-content__helpers-button">+ <span class="main-content__helpers-text">item</span>
-                </button>
-                <button class="main-content__settings">
-                    <img class="main-content__settings-icon" src="images/settings.png" alt="">
+
+    <div class="main-wrapper">
+
+        <div class="main-content">
+            <div class="main-content__head">
+                <h1 class="main-content__title">Page title in </h1>
+                <button class="header-top__choice main-content__choice">
+                    <div class="header-top__choice-option main-content__choice-option">
+                        <span class="header-top__choice-text">New York</span>
+                    </div>
+                    <img class="header-top__choice-arrow main-content__choice-arrow" src="images/arrow-black.png"
+                         alt="">
                 </button>
             </div>
+            <div class="main-content__helpers">
+                <label class="search-form">
+                    <input class="search-form__field" type="search" placeholder="Search...">
+                    <img class="search-form__icon" src="images/search-black.png" alt="">
+                </label>
+                <div class="main-content__helpers-wrapper">
+                    <button class="main-content__helpers-button">+ <span class="main-content__helpers-text">item</span>
+                    </button>
+                    <button class="main-content__settings">
+                        <img class="main-content__settings-icon" src="images/settings.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="post-wrapper">
+                <div class="post">
+                    <div class="post__photo-wrapper">
+                        <img class="post__photo" src="images/photo1.jpg" alt="photo">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-content__wrapper">
+                            <div class="post-holder">
+                                <a class="post-holder__name" href="">User name</a>
+                                <div class="post-holder__level">
+                                    <span lass="post-holder__text">Pro</span>
+                                </div>
+                            </div>
+                            <div class="post-content__wrapper-left">
+                                <a class="post-comments" href="">
+                                    <img class="post-comments__icon" src="images/dialog.png" alt="comments">
+                                    <div class="post-comments__value">
+                                        <span class="post-comments__value-text">2</span>
+                                    </div>
+                                </a>
+                                <div class="post-time">
+                                    <img class="post-time__icon" src="images/clock.png" alt="time">
+                                    <div class="post-time__value">
+                                        <span class="post-time__value-text">20m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-description">
+                            <h3 class="post__head">Item title 1</h3>
+                            <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum
+                                efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor
+                                pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
+                                magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                        </div>
+                        <div class="post-tags">
+                            <img class="post-tags__icon" src="images/pencil.png" alt="edit">
+                            <a class="post-tags__item" href="">tag1</a>,
+                            <a class="post-tags__item" href="">tag2</a>,
+                            <a class="post-tags__item" href="">tag3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__photo-wrapper">
+                        <img class="post__photo" src="images/photo2.jpg" alt="photo">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-content__wrapper">
+                            <div class="post-holder">
+                                <a class="post-holder__name" href="">User name</a>
+                                <div class="post-holder__level">
+                                    <span lass="post-holder__text">Member</span>
+                                </div>
+                            </div>
+                            <div class="post-content__wrapper">
+                                <a class="post-comments" href="">
+                                    <img class="post-comments__icon" src="images/dialog.png" alt="comments">
+                                    <div class="post-comments__value">
+                                        <span class="post-comments__value-text">2</span>
+                                    </div>
+                                </a>
+                                <div class="post-time">
+                                    <img class="post-time__icon" src="images/clock.png" alt="time">
+                                    <div class="post-time__value">
+                                        <span class="post-time__value-text">20m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-description">
+                            <h3 class="post__head">Item title 2</h3>
+                            <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum
+                                efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor
+                                pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
+                                magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                        </div>
+                        <div class="post-tags">
+                            <img class="post-tags__icon" src="images/pencil.png" alt="edit">
+                            <a class="post-tags__item" href="">tag1</a>,
+                            <a class="post-tags__item" href="">tag2</a>,
+                            <a class="post-tags__item" href="">tag3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__photo-wrapper">
+                        <img class="post__photo" src="images/photo3.jpg" alt="photo">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-content__wrapper">
+                            <div class="post-holder">
+                                <a class="post-holder__name" href="">User name</a>
+                                <div class="post-holder__level"><span lass="post-holder__text">Member</span></div>
+                            </div>
+                            <div class="post-content__wrapper">
+                                <a class="post-comments" href="">
+                                    <img class="post-comments__icon" src="images/dialog.png" alt="comments">
+                                    <div class="post-comments__value">
+                                        <span class="post-comments__value-text">2</span>
+                                    </div>
+                                </a>
+                                <div class="post-time">
+                                    <img class="post-time__icon" src="images/clock.png" alt="time">
+                                    <div class="post-time__value">
+                                        <span class="post-time__value-text">20m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-description">
+                            <h3 class="post__head">Item title 3</h3>
+                            <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum
+                                efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor
+                                pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
+                                magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                        </div>
+                        <div class="post-tags">
+                            <img class="post-tags__icon" src="images/pencil.png" alt="edit">
+                            <a class="post-tags__item" href="">tag1</a>,
+                            <a class="post-tags__item" href="">tag2</a>,
+                            <a class="post-tags__item" href="">tag3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__photo-wrapper">
+                        <img class="post__photo" src="images/photo4.jpg" alt="photo">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-content__wrapper">
+                            <div class="post-holder">
+                                <a class="post-holder__name" href="">User name</a>
+                                <div class="post-holder__level">
+                                    <span lass="post-holder__text">Member</span>
+                                </div>
+                            </div>
+                            <div class="post-content__wrapper">
+                                <a class="post-comments" href="">
+                                    <img class="post-comments__icon" src="images/dialog.png" alt="comments">
+                                    <div class="post-comments__value"><span class="post-comments__value-text">2</span>
+                                    </div>
+                                </a>
+                                <div class="post-time">
+                                    <img class="post-time__icon" src="images/clock.png" alt="time">
+                                    <div class="post-time__value">
+                                        <span class="post-time__value-text">20m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-description">
+                            <h3 class="post__head">Item title 4</h3>
+                            <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum
+                                efficitur. Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor
+                                pretium dapibus quis quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
+                                magna. Duis porta erat vitae lectus lacinia tempus.</p>
+                        </div>
+                        <div class="post-tags">
+                            <img class="post-tags__icon" src="images/pencil.png" alt="edit">
+                            <a class="post-tags__item" href="">tag1</a>,
+                            <a class="post-tags__item" href="">tag2</a>,
+                            <a class="post-tags__item" href="">tag3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <a class="navigation__link" href="">
+                    <img class="navigation__arrow-left navigation__arrow" src="images/arrow-black.png" alt=""> Previous
+                </a>
+                <a class="navigation__link" href="">
+                    Next
+                    <img class="navigation__arrow-right navigation__arrow" src="images/arrow-black.png" alt="">
+                </a>
+            </div>
         </div>
 
-        <div class="post-wrapper">
-            <div class="post">
-                <div class="post__photo-wrapper">
-                    <img class="post__photo" src="images/photo1.jpg" alt="photo">
-                </div>
-                <div class="post-content">
-                    <div class="post-content__wrapper">
-                        <div class="post-holder">
-                            <a class="post-holder__name" href="">User name</a>
-                            <div class="post-holder__level">Pro</div>
-                        </div>
-                        <div class="post-content__wrapper-left">
-                            <a class="post-comments" href="">
-                                <img class="post-comments__icon" src="images/dialog.png" alt="comments">
-                                <div class="post-comments__value">2</div>
-                            </a>
-                            <div class="post-time">
-                                <img class="post-time__icon" src="images/clock.png" alt="time">
-                                <div class="post-time__value">20m</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <h3 class="post__head">Item title 1</h3>
-                        <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur.
-                            Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis
-                            quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
-                            magna. Duis porta erat vitae lectus lacinia tempus.</p>
-                    </div>
-                    <div class="post-tags">
-                        <img class="post-tags__icon" src="images/pencil.png" alt="edit">
-                        <a class="post-tags__item" href="">tag1</a>,
-                        <a class="post-tags__item" href="">tag2</a>,
-                        <a class="post-tags__item" href="">tag3</a>
-                    </div>
+
+        <footer class="footer">
+
+            <div class="footer-top content">
+                <ul class="menu">
+                    <li class="menu__item footer-top__menu-item">
+                        <a class="menu__item-link footer-top__menu-link" href="">About</a>
+                    </li>
+                    <li class="menu__item footer-top__menu-item">
+                        <a class="menu__item-link footer-top__menu-link" href="">Policies</a>
+                    </li>
+                    <li class="menu__item footer-top__menu-item">
+                        <a class="menu__item-link footer-top__menu-link" href="">Site map</a>
+                    </li>
+                    <li class="menu__item footer-top__menu-item">
+                        <a class="menu__item-link footer-top__menu-link" href="">Help</a>
+                    </li>
+                    <li class="menu__item footer-top__menu-item">
+                        <a class="menu__item-link footer-top__menu-link" href="">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-low content">
+                <img class="footer-low__logo" src="images/logo-min.png" alt="Logo">
+                <div class="footer-low__description">
+                    <p class="footer-low__description-text">&copy; 2015. Qulix Systems. All rights reserved.</p>
                 </div>
             </div>
 
-            <div class="post">
-                <div class="post__photo-wrapper">
-                    <img class="post__photo" src="images/photo2.jpg" alt="photo">
-                </div>
-                <div class="post-content">
-                    <div class="post-content__wrapper">
-                        <div class="post-holder">
-                            <a class="post-holder__name" href="">User name</a>
-                            <div class="post-holder__level">Member</div>
-                        </div>
-                        <div class="post-content__wrapper">
-                            <a class="post-comments" href="">
-                                <img class="post-comments__icon" src="images/dialog.png" alt="comments">
-                                <div class="post-comments__value">2</div>
-                            </a>
-                            <div class="post-time">
-                                <img class="post-time__icon" src="images/clock.png" alt="time">
-                                <div class="post-time__value">20m</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <h3 class="post__head">Item title 2</h3>
-                        <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur.
-                            Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis
-                            quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
-                            magna. Duis porta erat vitae lectus lacinia tempus.</p>
-                    </div>
-                    <div class="post-tags">
-                        <img class="post-tags__icon" src="images/pencil.png" alt="edit">
-                        <a class="post-tags__item" href="">tag1</a>,
-                        <a class="post-tags__item" href="">tag2</a>,
-                        <a class="post-tags__item" href="">tag3</a>
-                    </div>
-                </div>
-            </div>
+        </footer>
 
-            <div class="post">
-                <div class="post__photo-wrapper">
-                    <img class="post__photo" src="images/photo3.jpg" alt="photo">
-                </div>
-                <div class="post-content">
-                    <div class="post-content__wrapper">
-                        <div class="post-holder">
-                            <a class="post-holder__name" href="">User name</a>
-                            <div class="post-holder__level">Member</div>
-                        </div>
-                        <div class="post-content__wrapper">
-                            <a class="post-comments" href="">
-                                <img class="post-comments__icon" src="images/dialog.png" alt="comments">
-                                <div class="post-comments__value">2</div>
-                            </a>
-                            <div class="post-time">
-                                <img class="post-time__icon" src="images/clock.png" alt="time">
-                                <div class="post-time__value">20m</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <h3 class="post__head">Item title 3</h3>
-                        <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur.
-                            Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis
-                            quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
-                            magna. Duis porta erat vitae lectus lacinia tempus.</p>
-                    </div>
-                    <div class="post-tags">
-                        <img class="post-tags__icon" src="images/pencil.png" alt="edit">
-                        <a class="post-tags__item" href="">tag1</a>,
-                        <a class="post-tags__item" href="">tag2</a>,
-                        <a class="post-tags__item" href="">tag3</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post__photo-wrapper">
-                    <img class="post__photo" src="images/photo4.jpg" alt="photo">
-                </div>
-                <div class="post-content">
-                    <div class="post-content__wrapper">
-                        <div class="post-holder">
-                            <a class="post-holder__name" href="">User name</a>
-                            <div class="post-holder__level">Member</div>
-                        </div>
-                        <div class="post-content__wrapper">
-                            <a class="post-comments" href="">
-                                <img class="post-comments__icon" src="images/dialog.png" alt="comments">
-                                <div class="post-comments__value">2</div>
-                            </a>
-                            <div class="post-time">
-                                <img class="post-time__icon" src="images/clock.png" alt="time">
-                                <div class="post-time__value">20m</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-description">
-                        <h3 class="post__head">Item title 4</h3>
-                        <p class="post__content">Suspendisse potenti. Duis imperdiet ex non leo condimentum efficitur.
-                            Sed rhoncus eleifend lacus sit amet faucibus. Nunc semper nisl a dolor pretium dapibus quis
-                            quis lacus. Nulla faucibus viverra laoreet. Fusce in scelerisque
-                            magna. Duis porta erat vitae lectus lacinia tempus.</p>
-                    </div>
-                    <div class="post-tags">
-                        <img class="post-tags__icon" src="images/pencil.png" alt="edit">
-                        <a class="post-tags__item" href="">tag1</a>,
-                        <a class="post-tags__item" href="">tag2</a>,
-                        <a class="post-tags__item" href="">tag3</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="navigation">
-            <a class="navigation__link" href="">
-                <img class="navigation__arrow-left navigation__arrow" src="images/arrow-black.png" alt=""> Previous
-            </a>
-            <a class="navigation__link" href="">
-                Next
-                <img class="navigation__arrow-right navigation__arrow" src="images/arrow-black.png" alt="">
-            </a>
-        </div>
     </div>
 
 </main>
-
-
-<footer class="footer">
-
-    <div class="footer-top content">
-        <ul class="menu">
-            <li class="menu__item footer-top__menu-item">
-                <a class="menu__item-link footer-top__menu-link" href="">About</a>
-            </li>
-            <li class="menu__item footer-top__menu-item">
-                <a class="menu__item-link footer-top__menu-link" href="">Policies</a>
-            </li>
-            <li class="menu__item footer-top__menu-item">
-                <a class="menu__item-link footer-top__menu-link" href="">Site map</a>
-            </li>
-            <li class="menu__item footer-top__menu-item">
-                <a class="menu__item-link footer-top__menu-link" href="">Help</a>
-            </li>
-            <li class="menu__item footer-top__menu-item">
-                <a class="menu__item-link footer-top__menu-link" href="">Contact us</a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="footer-low content">
-        <img class="footer-low__logo" src="images/logo-min.png" alt="Logo">
-        <div class="footer-low__description">
-            <p class="footer-low__description-text">&copy; 2015. Qulix Systems. All rights reserved.</p>
-        </div>
-    </div>
-
-</footer>
 
 
 <script src="js/common.js"></script>

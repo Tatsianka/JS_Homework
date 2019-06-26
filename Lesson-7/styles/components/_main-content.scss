@@ -3,6 +3,7 @@
     flex-direction: column;
     padding: 30px 0 80px;
     width: 100%;
+    flex-grow: 1;
     &__head {
         display: flex;
         flex-direction: row;
@@ -113,8 +114,13 @@
         border-radius: 4px;
         padding: 10px 15px;
         color: black;
+        transition: .5s;
         &:first-child {
             margin-right: 10px;
+        }
+        &:hover {
+            background-image: linear-gradient(to top, #a5adbe, #c8cfdd);
+            transition: .5s;
         }
     }
     &__arrow {

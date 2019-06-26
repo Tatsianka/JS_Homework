@@ -176,7 +176,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f2f4f8;
-  min-width: 320px;
+  min-width: 500px;
 }
 
 .content {
@@ -232,7 +232,7 @@ a {
 }
 
 .header-top__wrapper {
-  background-color: #000000;
+  background-color: #2d313d;
   height: 60px;
 }
 
@@ -264,7 +264,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: black;
+  background-color: #2d313d;
   padding: 0;
   margin-right: 32px;
   cursor: pointer;
@@ -289,7 +289,7 @@ a {
 
 .header-top__notice {
   margin-right: 32px;
-  background-color: black;
+  background-color: #2d313d;
   padding: 0;
   border: 0;
   cursor: pointer;
@@ -320,7 +320,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: black;
+  background-color: #2d313d;
   padding: 0;
   margin-right: 24px;
   cursor: pointer;
@@ -362,7 +362,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   border: 0;
-  background-color: black;
+  background-color: #2d313d;
   padding: 0;
   cursor: pointer;
 }
@@ -386,7 +386,7 @@ a {
 }
 
 .header-low__wrapper {
-  background-color: #727989;
+  background-color: #646d81;
   height: 40px;
 }
 
@@ -440,8 +440,7 @@ a {
   .logo {
     width: 60px;
     height: 40px;
-    background-image: url(../images/logo-white.png);
-    background-repeat: no-repeat;
+    background: url(../images/logo-white.png) no-repeat;
     background-size: contain;
     margin-right: 20px;
   }
@@ -483,7 +482,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   background-color: #f2f4f8;
+  padding-left: 30px;
 }
 
 .footer-top {
@@ -499,9 +502,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px white solid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .footer-top__menu-link {
@@ -525,9 +528,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .footer-low__logo {
@@ -544,12 +547,14 @@ a {
   .footer-top {
     display: none;
   }
+  .footer-low {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   background-color: white;
   -webkit-box-shadow: 0 3px 10px #e0e2e6;
           box-shadow: 0 3px 10px #e0e2e6;
@@ -560,6 +565,19 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  box-shadow: 0 3px 10px #e0e2e6;
+}
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: solid #e0e4ed 1px;
+  width: 100%;
 }
 
 .aside {
@@ -567,7 +585,10 @@ a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 20px 0;
-  border-right: solid #e0e4ed 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100vh;
 }
 
 .submenu {
@@ -633,6 +654,9 @@ a {
           flex-direction: column;
   padding: 30px 0 80px;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .main-content__head {
@@ -822,10 +846,19 @@ a {
   border-radius: 4px;
   padding: 10px 15px;
   color: black;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .navigation__link:first-child {
   margin-right: 10px;
+}
+
+.navigation__link:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a5adbe), to(#c8cfdd));
+  background-image: linear-gradient(to top, #a5adbe, #c8cfdd);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .navigation__arrow {
@@ -1200,8 +1233,10 @@ a {
             align-items: center;
     color: white;
     height: 100%;
+    -webkit-transition: .3s;
+    transition: .3s;
     padding: 10px;
-    background-color: black;
+    background-color: #2d313d;
   }
   .menu__item {
     width: 100%;

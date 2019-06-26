@@ -7,7 +7,7 @@
             align-items: center;
             justify-content: space-between;
             &__wrapper {
-                background-color: #000000;
+                background-color: #2d313d;
                 height: 60px;
             }
             &__box {
@@ -23,7 +23,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                background-color: black;
+                background-color: #2d313d;
                 padding: 0;
                 margin-right: 32px;
                 cursor: pointer;
@@ -41,7 +41,7 @@
             }
             &__notice {
                 margin-right: 32px;
-                background-color: black;
+                background-color: #2d313d;
                 padding: 0;
                 border: 0;
                 cursor: pointer;
@@ -62,7 +62,7 @@
                 border: 0;
                 display: flex;
                 flex-direction: row;
-                background-color: black;
+                background-color: #2d313d;
                 padding: 0;
                 margin-right: 24px;
                 cursor: pointer;
@@ -87,7 +87,7 @@
                 flex-direction: row;
                 align-items: center;
                 border: 0;
-                background-color: black;
+                background-color: #2d313d;
                 padding: 0;
                 cursor: pointer;
                 &-icon {
@@ -112,7 +112,7 @@
     
     .header-low {
         &__wrapper {
-            background-color: #727989;
+            background-color: #646d81;
             height: 40px;
         }
     }
@@ -150,8 +150,7 @@
         .logo {
             width: 60px;
             height: 40px;
-            background-image: url(../images/logo-white.png);
-            background-repeat: no-repeat;
+            background: url(../images/logo-white.png) no-repeat;
             background-size: contain;
             margin-right: 20px;
             &__image {
