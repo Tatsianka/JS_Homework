@@ -1,7 +1,7 @@
-  // ЗАДАНИЕ 1
+// ЗАДАНИЕ 1
 
 function createArrOfObj(arr) {
-    function changeArrElem(val, i, arr) {
+    function changeArrElem(val) {
         var nameObj = {};
 
         nameObj.name = val;
@@ -13,24 +13,27 @@ function createArrOfObj(arr) {
 
 createArrOfObj(['Peter', 'Oleg', 'Ivan']);
 
+// Исправленный вариант
+
+  function createArrOfObj(arr) {
+      function changeArrElem(val) {
+          return {name: val};
+      }
+
+      return arr.map(changeArrElem);
+  }
+
+  createArrOfObj(['Peter', 'Oleg', 'Ivan']);
+
 
 
 // ЗАДАНИЕ 2
 
-// способ 1
-
 function transformToTime(arr) {
-    return 'Текущее время : ' + arr.join(' : ');
-}
-
-transformToTime(['00', '13', '24']);
-
-// способ 2
-
-function transformToTime(arr) {
-    function addElem(res, val, i, arr) {
+    function addElem(res, val) {
         return res + ' : ' + val;
     }
+
     return arr.reduce(addElem, 'Текущее время');
 }
 
@@ -40,10 +43,21 @@ transformToTime(['00', '13', '24']);
 
 // ЗАДАНИЕ 3
 
-function countVowels(str) {
-    var vawelArr = str.match(/[аоиеёэыуюя]/ig);
-    return vawelArr.length;
-}
+ function countVowels(str) {
+      var strArr = str.toLowerCase().split(''),
+          vowelsQnty = 0,
+          vowelsArr = ['а', 'о', 'и', 'е', 'ё', 'э', 'ы', 'у', 'ю', 'я'];
+
+      for (var i = 0; i < strArr.length; i++) {
+          if (vowelsArr.some(function(val) {
+              return val === strArr[i];
+          })) {
+              vowelsQnty++;
+          }
+      }
+
+      return vowelsQnty;
+  }
 
 countVowels('Проверим работоспособность!');
 countVowels('ЧТО скажешь на числа: 123345');
@@ -53,39 +67,25 @@ countVowels('Что насчет латиницы: word for checking ');
 
 // ЗАДАНИЕ 4
 
-// вариант 1
+  function transformText(text) {
+      var textArr = text.split(/[.!?]/);
 
-function transformText(text) {
-    var textArr = text.split(/[.!?]/);
+      textArr.pop();
 
-    textArr.pop();
+      function defineLength(val) {
+          var strLength = val.trim().split('').filter(deleteOdd).join('').length;
 
-    return textArr.forEach(function(val,i,arr) {
-        var lettersArr = val.match(/[а-яёa-z]/ig);
+          function deleteOdd (val) {
+              return val !== ' ' && val !== ',';
+          }
 
-        console.log (val.trim() + ' - ' + lettersArr.length + ' букв');
-    });
-}
+          return val + ' - ' + strLength + ' букв';
+      }
 
-transformText('Всем привет! Я удивлен, что вы здесь! Когда вы пришли? Я вас не видел.');
+      return textArr.map(defineLength).join(';\n');
+  }
 
-// вариант 2
-
-function transformText(text) {
-    var textArr = text.split(/[.!?]/);
-
-    textArr.pop();
-
-    var elemLengthArr = textArr.map(function(val,i,arr) {
-        var lettersArr = val.match(/[а-яёa-z]/ig);
-
-        return val.trim() + ' - ' + lettersArr.length + ' букв';
-    });
-
-    return elemLengthArr.join(';\n');
-}
-
-transformText('Всем привет! Я удивлен, что вы здесь! Когда вы пришли? Я вас не видел.');
+  transformText('Всем привет! Я удивлен, что вы здесь! Когда вы пришли? Я вас не видел.');
 
 
 
