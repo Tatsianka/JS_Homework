@@ -9,11 +9,10 @@ secondPar.innerHTML = 'Hello, here are <a href="http://google.by">Link 3</a> and
 container.appendChild(firstPar);
 container.appendChild(secondPar);
 
-
 var button = document.getElementsByTagName('button')[0];
 
 function changeStyle() {
-    var linksOfFirstPar = document.getElementsByTagName('p')[0].getElementsByTagName('a');
+    var linksOfFirstPar = container.firstChild.children;
 
     for (var i = 0; i < linksOfFirstPar.length; i++) {
         linksOfFirstPar[i].classList.add('changedStyle-JS');
@@ -22,19 +21,25 @@ function changeStyle() {
 
 button.addEventListener('click', changeStyle, false);
 
-
-container.onclick = function(event){
-    var linksOfSecondPar = document.getElementsByTagName('p')[1].getElementsByTagName('a'),
+container.onclick = function(event) {
+    var linksOfSecondPar = container.lastChild.children,
         target = event.target;
 
-    for (var i = 0; i < linksOfSecondPar.length; i++){
+    for (var i = 0; i < linksOfSecondPar.length; i++) {
         if (linksOfSecondPar[i] === target) {
             event.preventDefault();
 
             alert(linksOfSecondPar[i].getAttribute('href'));
         }
     }
-}
+};
+
+
+
+
+
+
+
 
 
 

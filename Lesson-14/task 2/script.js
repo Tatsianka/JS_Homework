@@ -1,19 +1,31 @@
 var button = document.getElementsByTagName('button')[0],
     inputCollection = document.getElementsByTagName('input');
 
+
+button.setAttribute('disabled', 'true');
+
 for (var i = 0; i < inputCollection.length; i++) {
     var inputEl = inputCollection[i];
 
     inputEl.addEventListener('keyup', function() {
-        if (!inputEl.value || inputEl.value == ' ') {
-            button.setAttribute('disabled', 'true');
-        }
 
-        if (inputEl.value && inputEl.value != ' ') {
+        if (inputEl.value.trim()) {
+
             button.removeAttribute('disabled');
+        } else {
+            button.setAttribute('disabled', 'true');
         }
     }, false)
 }
+
+
+// button.setAttribute('disabled', 'true');
+// inputEl.addEventListener('keyup', function() {
+//     if (inputEl.value.trim()) {
+//         button.removeAttribute('disabled');
+//     }
+// }, false);
+
 
 button.addEventListener('click', function() {
     if (document.getElementsByClassName('table')[0]) {
