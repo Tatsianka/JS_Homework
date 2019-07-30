@@ -7,21 +7,39 @@ button.onclick = function () {
 
         createUserInfoPlate(userDataArr);
     } else {
+
         var userData = new XMLHttpRequest();
 
         userData.open('GET', 'https://reqres.in/api/users?page=2', true);
 
         userData.send();
 
+        userData.onerror = function () {
+            container.innerHTML += '<span class="error-JS">Error! The data cannot be recieved from '
+                + 'the server</span>';
+        }
+
         userData.onload = function () {
-            if (userData.status === 200) {
-                var userDataArr = JSON.parse(userData.response).data;
+            try {
+                if (userData.status === 200) {
+                    var userDataArr = JSON.parse(userData.response).data;
 
-                localStorage.setItem('dataFromServer', userData.response);
+                    localStorage.setItem('dataFromServer', userData.response);
 
-                createUserInfoPlate(userDataArr);
-            } else {
-                container.innerHTML += '<span class="error-JS">Error! The data cannot be recieved from the server</span>';
+                    createUserInfoPlate(userDataArr);
+                } else {
+                    container.innerHTML += '<span class="error-JS">Error! The data cannot be recieved from ' +
+                        'the server</span>';
+                }
+            } catch (e) {
+                userData.abort();
+
+                localStorage.removeItem('dataFromServer');
+
+                container.lastChild.remove();
+
+                container.innerHTML += '<span class="error-JS">Error! The data cannot be recieved from ' +
+                    'the server</span>';
             }
         };
     }
